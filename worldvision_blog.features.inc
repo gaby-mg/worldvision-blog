@@ -19,7 +19,7 @@ function worldvision_blog_node_info() {
     'wv_blog_post' => array(
       'name' => t('Blog Post'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Use <em>blog posts</em> instead of the default <em>Article</em> content type for <strong>World Vision</strong> time-sensitive content.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
