@@ -5,6 +5,7 @@ package = Features
 version = 7.x-1.0-beta1
 dependencies[] = ctools
 dependencies[] = features
+dependencies[] = flippy
 dependencies[] = image
 dependencies[] = taxonomy
 dependencies[] = text
