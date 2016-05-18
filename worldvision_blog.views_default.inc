@@ -90,6 +90,25 @@ function worldvision_blog_views_default_views() {
     'page' => 'page',
   );
   $handler->display->display_options['sitename_title'] = '1';
+  $translatables['wv_blog_index'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Blog'),
+    t('Feed'),
+    t('Front page feed'),
+  );
   $export['wv_blog_index'] = $view;
 
   return $export;
