@@ -1,5 +1,5 @@
 name = WorldVision Blog
-description = Provides a 'Blog Post' content type and a 'Blog Index' view
+description = Provides a **Blog Post** content type and the views **Blog Index** and **Latest News**
 core = 7.x
 package = Features
 version = 7.x-1.0-beta1
@@ -21,4 +21,5 @@ features[field_instance][] = node-wv_blog_post-field_tags
 features[node][] = wv_blog_post
 features[taxonomy][] = tags
 features[views_view][] = wv_blog_index
+features[views_view][] = wv_latest_news
 features_exclude[dependencies][worldvision_project] = worldvision_project
