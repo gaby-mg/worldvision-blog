@@ -16,12 +16,12 @@ function worldvision_blog_views_api($module = NULL, $api = NULL) {
  */
 function worldvision_blog_node_info() {
   $items = array(
-    'wv_blog_post' => array(
+    'actualidad' => array(
       'name' => t('Blog Post'),
       'base' => 'node_content',
       'description' => t('Use <em>blog posts</em> instead of the default <em>Article</em> content type for <strong>World Vision</strong> time-sensitive content.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Título'),
       'help' => '',
     ),
   );
