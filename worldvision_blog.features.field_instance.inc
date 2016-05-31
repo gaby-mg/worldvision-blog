@@ -52,68 +52,6 @@ function worldvision_blog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-actualidad-field_action_link'.
-  $field_instances['node-actualidad-field_action_link'] = array(
-    'bundle' => 'actualidad',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 9,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_action_link',
-    'label' => 'Enlace',
-    'required' => 0,
-    'settings' => array(
-      'absolute_url' => 1,
-      'attributes' => array(
-        'class' => '',
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'linkit' => array(
-        'enable' => 0,
-        'insert_plugin' => '',
-      ),
-      'rel_remove' => 'default',
-      'title' => 'required',
-      'title_label_use_field_label' => FALSE,
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-      ),
-      'type' => 'link_field',
-      'weight' => 15,
-    ),
-  );
-
   // Exported field_instance: 'node-actualidad-field_date'.
   $field_instances['node-actualidad-field_date'] = array(
     'bundle' => 'actualidad',
@@ -139,7 +77,7 @@ function worldvision_blog_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -186,13 +124,13 @@ function worldvision_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_news_category',
     'label' => 'Categoría',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -209,7 +147,7 @@ function worldvision_blog_field_default_field_instances() {
   $field_instances['node-actualidad-field_picture'] = array(
     'bundle' => 'actualidad',
     'deleted' => 0,
-    'description' => 'Tamaño máximo de imágenes 1-2Mb / tamaño mínimo 600x245px',
+    'description' => 'Tamaño mínimo 600x245px',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -223,15 +161,19 @@ function worldvision_blog_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'large',
+        ),
+        'type' => 'image',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_picture',
     'label' => 'Imagen',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
@@ -247,64 +189,11 @@ function worldvision_blog_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'imce_filefield_on' => 0,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
       'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-actualidad-field_picture_view'.
-  $field_instances['node-actualidad-field_picture_view'] = array(
-    'bundle' => 'actualidad',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => 'content',
-          'image_style' => 'news_category',
-        ),
-        'type' => 'image',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_picture_view',
-    'label' => 'Imagen Listado',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'imce_filefield_on' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 8,
     ),
   );
 
@@ -326,7 +215,7 @@ function worldvision_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -485,7 +374,7 @@ Si se establece esta campo la imagen solo se mostrará en los listados no en el 
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -589,15 +478,13 @@ Si se establece esta campo la imagen solo se mostrará en los listados no en el 
   t('Cuerpo');
   t('Ejemplo: http://www.youtube.com/watch?v=[TEXTO A COPIAR].
 Si se establece esta campo la imagen solo se mostrará en los listados no en el detalle de la noticia');
-  t('Enlace');
   t('Entradilla');
   t('Este campo solo se mostrará en el listado de noticias');
   t('Fecha');
   t('Imagen');
-  t('Imagen Listado');
   t('Noticias relacionadas');
   t('Subtítulo');
-  t('Tamaño máximo de imágenes 1-2Mb / tamaño mínimo 600x245px');
+  t('Tamaño mínimo 600x245px');
   t('YouTube ID');
 
   return $field_instances;
