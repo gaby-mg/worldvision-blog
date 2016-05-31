@@ -40,15 +40,6 @@ function worldvision_blog_views_default_views() {
   $handler->display->display_options['style_options']['masonry_rtl'] = FALSE;
   $handler->display->display_options['style_options']['masonry_images_first'] = TRUE;
   $handler->display->display_options['row_plugin'] = 'node';
-  /* Field: Content: Imagen Listado */
-  $handler->display->display_options['fields']['field_picture_view']['id'] = 'field_picture_view';
-  $handler->display->display_options['fields']['field_picture_view']['table'] = 'field_data_field_picture_view';
-  $handler->display->display_options['fields']['field_picture_view']['field'] = 'field_picture_view';
-  $handler->display->display_options['fields']['field_picture_view']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_picture_view']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
   /* Sort criterion: Content: Sticky */
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['table'] = 'node';
@@ -59,13 +50,6 @@ function worldvision_blog_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Promoted to front page */
-  $handler->display->display_options['filters']['promote']['id'] = 'promote';
-  $handler->display->display_options['filters']['promote']['table'] = 'node';
-  $handler->display->display_options['filters']['promote']['field'] = 'promote';
-  $handler->display->display_options['filters']['promote']['value'] = '1';
-  $handler->display->display_options['filters']['promote']['group'] = 0;
-  $handler->display->display_options['filters']['promote']['expose']['operator'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -119,7 +103,6 @@ function worldvision_blog_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
-    t('Imagen Listado'),
     t('Blog'),
     t('Feed'),
     t('Front page feed'),
@@ -162,11 +145,11 @@ function worldvision_blog_views_default_views() {
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
-  /* Field: Content: Enlace */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_action_link']['id'] = 'field_action_link';
   $handler->display->display_options['fields']['field_action_link']['table'] = 'field_data_field_action_link';
   $handler->display->display_options['fields']['field_action_link']['field'] = 'field_action_link';
-  $handler->display->display_options['fields']['field_action_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_action_link']['label'] = 'Enlace';
   /* Field: Content: Imagen */
   $handler->display->display_options['fields']['field_picture']['id'] = 'field_picture';
   $handler->display->display_options['fields']['field_picture']['table'] = 'field_data_field_picture';
