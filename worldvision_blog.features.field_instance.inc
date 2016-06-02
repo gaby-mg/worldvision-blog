@@ -61,16 +61,8 @@ function worldvision_blog_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'short',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => FALSE,
-        ),
-        'type' => 'date_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -153,8 +145,8 @@ function worldvision_blog_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => 'full_width_2cols',
+          'image_link' => 'file',
+          'image_style' => '',
         ),
         'type' => 'image',
         'weight' => 0,
