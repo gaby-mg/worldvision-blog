@@ -1,5 +1,5 @@
 name = WorldVision Blog
-description = Provides a **Blog Post** content type and the views **Blog Index** and **Latest News**
+description = Provides a **Blog Post** content type and the views: **Blog Index**, **Latest News**, **Related Blog Posts**
 core = 7.x
 package = Features
 version = 7.x-1.0-beta1
@@ -38,6 +38,8 @@ features[field_instance][] = node-actualidad-field_youtube_id
 features[field_instance][] = taxonomy_term-news_category-field_image_category
 features[node][] = actualidad
 features[taxonomy][] = news_category
+features[views_view][] = related_blog_posts
 features[views_view][] = wv_blog_index
 features[views_view][] = wv_latest_news
 features_exclude[field_base][body] = body
+features_exclude[dependencies][worldvision_project] = worldvision_project
