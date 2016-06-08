@@ -48,54 +48,7 @@ function worldvision_blog_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 12,
-    ),
-  );
-
-  // Exported field_instance: 'node-actualidad-field_date'.
-  $field_instances['node-actualidad-field_date'] = array(
-    'bundle' => 'actualidad',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_date',
-    'label' => 'Fecha',
-    'required' => 1,
-    'settings' => array(
-      'default_value' => 'now',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'increment' => 15,
-        'input_format' => 'd/m/Y - H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'text_parts' => array(),
-        'year_range' => '-3:+3',
-      ),
-      'type' => 'date_select',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -131,7 +84,7 @@ function worldvision_blog_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 1,
+      'weight' => 5,
     ),
   );
 
@@ -185,48 +138,7 @@ function worldvision_blog_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-actualidad-field_related_news'.
-  $field_instances['node-actualidad-field_related_news'] = array(
-    'bundle' => 'actualidad',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'node_reference',
-        'settings' => array(),
-        'type' => 'node_reference_default',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_related_news',
-    'label' => 'Noticias relacionadas',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'node_reference',
-      'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'node_reference_autocomplete',
-      'weight' => 13,
+      'weight' => 4,
     ),
   );
 
@@ -299,7 +211,7 @@ function worldvision_blog_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 10,
+      'weight' => 1,
     ),
   );
 
@@ -344,77 +256,7 @@ function worldvision_blog_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 11,
-    ),
-  );
-
-  // Exported field_instance: 'node-actualidad-field_youtube_id'.
-  $field_instances['node-actualidad-field_youtube_id'] = array(
-    'bundle' => 'actualidad',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Ejemplo: http://www.youtube.com/watch?v=[TEXTO A COPIAR].
-Si se establece esta campo la imagen solo se mostrará en los listados no en el detalle de la noticia',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_youtube_id',
-    'label' => 'YouTube ID',
-    'required' => 0,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
-      'linkit' => array(
-        'enable' => 0,
-        'insert_plugin' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 2,
     ),
   );
 
@@ -468,16 +310,11 @@ Si se establece esta campo la imagen solo se mostrará en los listados no en el 
   // Included for use with string extractors like potx.
   t('Categoría');
   t('Cuerpo');
-  t('Ejemplo: http://www.youtube.com/watch?v=[TEXTO A COPIAR].
-Si se establece esta campo la imagen solo se mostrará en los listados no en el detalle de la noticia');
   t('Entradilla');
   t('Este campo solo se mostrará en el listado de noticias');
-  t('Fecha');
   t('Imagen');
-  t('Noticias relacionadas');
   t('Subtítulo');
   t('Tamaño mínimo 600x245px');
-  t('YouTube ID');
 
   return $field_instances;
 }

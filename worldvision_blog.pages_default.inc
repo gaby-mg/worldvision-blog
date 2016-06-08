@@ -87,6 +87,29 @@ function worldvision_blog_default_page_manager_handlers() {
     $display->content['new-475f7534-8a67-4a76-acef-488d5a55bfbd'] = $pane;
     $display->panels['bottom'][0] = 'new-475f7534-8a67-4a76-acef-488d5a55bfbd';
     $pane = new stdClass();
+    $pane->pid = 'new-479810db-13f9-456f-b392-9b4c36229d0b';
+    $pane->panel = 'bottom';
+    $pane->type = 'block';
+    $pane->subtype = 'block-1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Suscríbete a nuestro newsletter',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '479810db-13f9-456f-b392-9b4c36229d0b';
+    $display->content['new-479810db-13f9-456f-b392-9b4c36229d0b'] = $pane;
+    $display->panels['bottom'][1] = 'new-479810db-13f9-456f-b392-9b4c36229d0b';
+    $pane = new stdClass();
     $pane->pid = 'new-d72d970e-3fe0-4c9b-931c-e89b325d6135';
     $pane->panel = 'middle';
     $pane->type = 'entity_view';
