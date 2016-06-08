@@ -253,6 +253,7 @@ function worldvision_blog_views_default_views() {
   $handler->display->display_options['row_options']['title'] = 'title';
   $handler->display->display_options['row_options']['content'] = array(
     'field_summary' => 'field_summary',
+    'view_node' => 'view_node',
     'field_picture' => 0,
     'title' => 0,
   );
@@ -277,6 +278,17 @@ function worldvision_blog_views_default_views() {
   $handler->display->display_options['fields']['field_summary']['field'] = 'field_summary';
   $handler->display->display_options['fields']['field_summary']['label'] = '';
   $handler->display->display_options['fields']['field_summary']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_summary']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_summary']['settings'] = array(
+    'trim_length' => '300',
+  );
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Leer más';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -310,6 +322,7 @@ function worldvision_blog_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Imagen'),
+    t('Leer más'),
     t('Block'),
   );
   $export['wv_latest_news'] = $view;
