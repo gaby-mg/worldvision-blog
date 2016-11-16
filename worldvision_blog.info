@@ -1,8 +1,8 @@
 name = WorldVision Blog
 description = Provides the **Blog Post** content type, a **Blog Post Page** and several views
 core = 7.x
-package = Features
-version = 7.x-1.0-beta1
+package = WorldVision
+version = 7.x-1.0-beta3
 dependencies[] = ctools
 dependencies[] = date
 dependencies[] = features
